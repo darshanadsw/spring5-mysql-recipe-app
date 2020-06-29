@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://1localhost:3307/dw_dev
+    username: dw_dev_user
+    password: dw
+    platform: mysql
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database: mysql
+    show-sql: true
+#    properties:
+#      javax:
+#        persistence:
+#          schema-generation:
+#            create-source: metadata
+#            scripts:
+#              action: create
+#              create-target: dw_database_create.sql
