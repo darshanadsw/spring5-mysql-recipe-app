@@ -1,14 +1,16 @@
 spring:
+  profiles:
+    active: dev
   datasource:
-    url: jdbc:mysql://1localhost:3307/dw_dev
-    username: dw_dev_user
-    password: dw
+    url: jdbc:mysql://db:3306/dw_dev
+    username: root
+    password: root
     platform: mysql
     initialization-mode: always
   jpa:
     hibernate:
-      ddl-auto: validate
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL5Dialect
     database: mysql
     show-sql: true
 #    properties:
