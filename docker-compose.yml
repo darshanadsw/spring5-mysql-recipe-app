@@ -10,6 +10,8 @@ services:
     restart: on-failure
     depends_on:
       - db
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
     ports:
       - 8081:8080
